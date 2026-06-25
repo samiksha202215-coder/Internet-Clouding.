@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — InternetClouding</title>
+  <meta name="description" content="Web development projects by InternetClouding — websites, e-commerce, and landing pages." />
+  <meta name="theme-color" content="#f2f6f0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo logo-img"><img src="images/logo.png" alt="InternetClouding" /></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-nav">Get a Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Our Work</p>
+    <h1>Projects We're<br/><span class="gradient-text">Proud Of</span></h1>
+    <p class="page-hero-sub">A selection of websites and e-commerce stores we've built for clients across industries and countries.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all"       onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn"        data-filter="website"   onclick="filterProjects('website',this)">Websites</button>
+      <button class="filter-btn"        data-filter="ecommerce" onclick="filterProjects('ecommerce',this)">E-Commerce</button>
+      <button class="filter-btn"        data-filter="landing"   onclick="filterProjects('landing',this)">Landing Pages</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- StyleCart -->
+      <div class="portfolio-card" data-category="ecommerce">
+        <div class="portfolio-thumb">
+          <!--
+            HOW TO ADD YOUR OWN IMAGE:
+            Replace the src below with your image path, e.g.:
+            src="images/stylecart.jpg"
+            Recommended size: 800x500px, save to the images/ folder
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop&auto=format"
+            alt="StyleCart fashion e-commerce website"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')"
+          />
+          <div class="pt-overlay"><span>E-Commerce</span></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>StyleCart</h3>
+          <p>Fashion e-commerce store with 500+ products, Razorpay checkout, and a custom order management dashboard.</p>
+          <div class="portfolio-tags">
+            <span class="tag">E-Commerce</span>
+            <span class="tag">Razorpay</span>
+            <span class="tag">Custom Dashboard</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NovaClinics -->
+      <div class="portfolio-card" data-category="website">
+        <div class="portfolio-thumb">
+          <!--
+            Replace src with: src="images/novaclinics.jpg"
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop&auto=format"
+            alt="NovaClinics healthcare website"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')"
+          />
+          <div class="pt-overlay"><span>Website</span></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>NovaClinics</h3>
+          <p>Multi-location healthcare clinic website with online appointment booking and doctor profile pages.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Healthcare</span>
+            <span class="tag">Booking System</span>
+            <span class="tag">Multi-location</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GrowFast Academy -->
+      <div class="portfolio-card" data-category="landing">
+        <div class="portfolio-thumb">
+          <!--
+            Replace src with: src="images/growfast.jpg"
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop&auto=format"
+            alt="GrowFast Academy landing page"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')"
+          />
+          <div class="pt-overlay"><span>Landing Page</span></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>GrowFast Academy</h3>
+          <p>High-converting course launch landing page with lead capture, countdown timer, and testimonial section.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Landing Page</span>
+            <span class="tag">Lead Gen</span>
+            <span class="tag">Countdown Timer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BuildCraft Architecture -->
+      <div class="portfolio-card" data-category="website">
+        <div class="portfolio-thumb">
+          <!--
+            Replace src with: src="images/buildcraft.jpg"
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop&auto=format"
+            alt="BuildCraft Architecture portfolio website"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')"
+          />
+          <div class="pt-overlay"><span>Website</span></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>BuildCraft Architecture</h3>
+          <p>Premium architecture firm portfolio with project gallery, animated transitions, and client enquiry flow.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Architecture</span>
+            <span class="tag">Portfolio</span>
+            <span class="tag">Animations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SpiceRoute Foods -->
+      <div class="portfolio-card" data-category="ecommerce">
+        <div class="portfolio-thumb">
+          <!--
+            Replace src with: src="images/spiceroute.jpg"
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&h=500&fit=crop&auto=format"
+            alt="SpiceRoute Foods e-commerce store"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('img-fallback')"
+          />
+          <div class="pt-overlay"><span>E-Commerce</span></div>
+        </div>
+        <div class="portfolio-info">
+          <h3>SpiceRoute Foods</h3>
+          <p>Direct-to-consumer food brand store with subscription boxes, wholesale tiers, and Stripe integration.</p>
+          <div class="portfolio-tags">
+            <span class="tag">Food & Beverage</span>
+            <span class="tag">Subscription</span>
+            <span class="tag">Stripe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder — YOUR NEXT PROJECT -->
+      <div class="portfolio-card portfolio-cta-card" data-category="website">
+        <div class="portfolio-thumb portfolio-thumb-cta">
+          <div class="cta-thumb-inner">
+            <div class="cta-thumb-icon">✦</div>
+            <p>Your project<br/>could be here</p>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Your Business</h3>
+          <p>We're taking on new projects. Let's build something great together.</p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:4px;padding:10px 22px;font-size:0.88rem;">Start a Project →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ADD YOUR OWN IMAGES — visible only in code -->
+<!--
+  TO ADD REAL PROJECT SCREENSHOTS:
+  1. Take a screenshot of the live website (or use a tool like screely.com)
+  2. Save as JPG/WebP, recommended size 800×500px
+  3. Upload to the "images/" folder on Hostinger
+  4. In this file, find each <img src="https://images.unsplash...">
+  5. Replace the src with: src="images/your-filename.jpg"
+  That's it! The image will show automatically.
+-->
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Want to be on this list?</h2>
+    <p>Tell us about your project — we'll get back to you within 24 hours.</p>
+    <a href="contact.html" class="btn btn-white">Start a Project →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-img"><img src="images/logo.png" alt="InternetClouding" /></a>
+        <p>Professional web development for businesses and brands worldwide.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Website Design</a></li>
+          <li><a href="services.html">E-Commerce</a></li>
+          <li><a href="services.html">Landing Pages</a></li>
+          <li><a href="services.html">SEO & Speed</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:samiksha06@internetclouding.in">samiksha06@internetclouding.in</a></li>
+          <li><a href="tel:+919915428793">+91 9915428793</a></li>
+          <li><a href="https://wa.me/919915428793" target="_blank">WhatsApp →</a></li>
+          <li>Ludhiana, Punjab, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 InternetClouding. All rights reserved. · <a href="https://internetclouding.in" style="color:inherit;">internetclouding.in</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
